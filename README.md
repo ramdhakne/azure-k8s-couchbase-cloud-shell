@@ -60,6 +60,7 @@ Delete deployment first, deleting pods will not help as k8s will spin up a lost 
 
 # Delete K8S cluster
 ```az aks delete --name <aks-k8s-cluster-name> --resource-group <resource-gp-name>```
+
 Above command can take anywhere between 2-5 mins, may be more.
 
 ## Get Group List
