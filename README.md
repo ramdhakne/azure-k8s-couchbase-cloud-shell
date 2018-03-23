@@ -53,7 +53,9 @@ Delete K8S deployment, service and pods
 Delete deployment first, deleting pods will not help as k8s will spin up a lost pod, as it will think this being a service failure. Go to last step if you want to delete in one command
 
 ```kubectl delete deployment [deployment-name]```
+
 ```kubectl delete service [service-name]```
+
 ```kubectl delete pods -l app=cb-example``` or ```kubectl delete pods --all``` [CAUTION: It might delete your ALL other pods too]
 
 # Delete K8S cluster
