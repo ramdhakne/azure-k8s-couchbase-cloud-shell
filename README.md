@@ -11,7 +11,9 @@ Steps to create Azure side resources (Resource Group and Azure kubernetes cluste
 
 ## Create AKS cluster
 ```az aks create --resource-group [GroupName] --name [AKSName] --node-count 1 --generate-ssh```
- 
+
+Above command can take anywhere between 2-5 mins, may be more.
+
 ## Get AKS credentials
 ```az aks get-credentials --resource-group=[GroupName]  --name=[AKSName]```
  
