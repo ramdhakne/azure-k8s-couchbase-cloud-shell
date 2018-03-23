@@ -1,7 +1,7 @@
 # azure-k8s-couchbase-cloud-shell
 Deploy Couchbase cluster in Azure K8s cluster via cloud shell
 
-Steps are to create Azure side resources (Resource Group and Azure kubernetes cluster) and Couchbase(CB) side resources (CB Operator, CB Cluster). Finally we cleanup the resources created.
+Steps to create Azure side resources (Resource Group and Azure kubernetes cluster) and Couchbase(CB) side resources (CB Operator, CB Cluster). Finally we cleanup the resources created.
 
 - [x] Highly recommended to **download/clone** the repo into local directory.
 
