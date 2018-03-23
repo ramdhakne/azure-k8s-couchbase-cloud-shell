@@ -24,6 +24,7 @@ Steps are to create Azure side resources (Resource Group and Azure kubernetes cl
 # Edit the operator and couchbase-cluster.yaml file, change following lines:
   - file: operator.yaml
   ```name: couchbase-operator-CUSTOMER_NAME => name: couchbase-operator-mycustomer```
+  
   Similar change in file couchbase-cluster.yaml
   - file: couchbase-cluster.yaml
   ```name:cb-example-aks-CUSTOMER_NAME => name: cb-example-aks-mycustomer```
