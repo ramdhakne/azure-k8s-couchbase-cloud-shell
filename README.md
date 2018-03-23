@@ -23,7 +23,7 @@ Above command can take anywhere between 2-5 mins, may be more.
 ## Get nodes
 ```kubectl get nodes```
 
-# Edit the operator and couchbase-cluster.yaml file, change following lines:
+# Edit the operator.yaml and couchbase-cluster.yaml file, change following lines:
   - file: operator.yaml
   ```name: couchbase-operator-CUSTOMER_NAME => name: couchbase-operator-mycustomer```
   
@@ -37,7 +37,9 @@ Above command can take anywhere between 2-5 mins, may be more.
   
 # Deploy Couchbase operator and cluster
 ```kubectl create -f secret.yaml```
+
 ```kubectl create -f operator.yaml```
+
 ```kubectl create -f couchbase-cluster.yaml```
 
 ## Expose Couchbase UI
