@@ -3,7 +3,7 @@ Deploy Couchbase cluster in Azure K8s cluster via cloud shell
 
 Steps are to create Azure side resources (Resource Group and Azure kubernetes cluster) and Couchbase(CB) side resources (CB Operator, CB Cluster). Finally we cleanup the resources created.
 
-# Highly recommended to download/clone the repo into local directory.
+- [x] Highly recommended to **download/clone** the repo into local directory.
 
 ## Create resource group
 ```az group create --name [GroupName] --location eastus```
@@ -48,7 +48,9 @@ Change ```“type: NodePort”``` -> ```“type: LoadBalancer” [its an VI edit
 … Open Couchbase console, Add steps to show self healing scenario, etc …
 Delete K8S deployment, service and pods
 
-# Add notes around why you can’t delete pods first, etc...
+# Cleanup
+Delete deployment first, deleting pods will not help as k8s will spin up a lost pod, as it will think this being a service failure. Go to last step if you want to delete in one command
+
 ```kubectl delete deployment [deployment-name]```
 ```kubectl delete service [service-name]```
 ```kubectl delete pods -l app=cb-example``` or ```kubectl delete pods --all``` [CAUTION: It might delete your ALL other pods too]
