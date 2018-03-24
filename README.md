@@ -45,7 +45,10 @@ Above command can take anywhere between 2-5 mins, may be more.
 ## Expose Couchbase UI
 ```kubectl get service```
 
-```kubectl edit service cb-example-ui```
+```kubectl edit service <service-name>```
+
+```example : kubectl edit service cb-example-ui```
+
 
 Change ```“type: NodePort”``` -> ```“type: LoadBalancer” [its an VI editor]```
 
