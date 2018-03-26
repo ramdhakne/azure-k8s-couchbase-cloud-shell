@@ -1,9 +1,14 @@
 # azure-k8s-couchbase-cloud-shell
 Deploy Couchbase cluster in Azure K8s cluster via cloud shell [azure-cloud-shell](https://shell.azure.com/)
 
+Login with Azure credentials and choose your favorite shell to work with Bash/Powershell
+
+![Alt text](/images/cloudshell.png?raw=true "Azure Cloud Shell")
+
+
 Steps to create Azure side resources (Resource Group and Azure kubernetes cluster) and Couchbase(CB) side resources (CB Operator, CB Cluster). Finally we cleanup the resources created.
 
-- [x] Highly recommended to **download/clone** the repo into local directory.
+- [x] **download/clone** the repo into local directory.
 
 ## Create resource group
 ```az group create --name [GroupName] --location eastus```
