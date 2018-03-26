@@ -18,7 +18,7 @@ spec:
        - name: WSID
          value: af773e1f-7dbb-4a08-ad65-af6e3c89a5b7 
        - name: KEY
-         value: SMaR2TZdABOEXvp5ZvqY/d6mtNVGSZ0vRgPX3Cxe6P4dRRDsU5+IzePDFolGKsTmZPJtujLnGG3wKK8cDQSuPw== 
+         value: <Primary KeY> 
        securityContext:
          privileged: true
        ports:
