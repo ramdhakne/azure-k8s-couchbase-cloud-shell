@@ -59,8 +59,17 @@ Change ```“type: NodePort”``` -> ```“type: LoadBalancer” [its an VI edit
 
 ```kubectl get service --watch``` [Wait for external ip to be provisioned]
 
-… Open Couchbase console, Add steps to show self healing scenario, etc …
-Delete K8S deployment, service and pods
+Open Couchbase console, perform the walk through
+#Steps to show self-healing scenario
+
+```kubectl get pods```
+
+```kubectl delete pods <couchbase-pod-name>```
+
+Couchbase operator should detect that # server count which is 3, is not 3 and it would recreate the pod to match the service definition as defined in the yaml file. 
+On couchbase server side, as auto-failover is set, once new K8s pod is added which is a new node for couchbase, it is added in the cluster and rebalance is performed and cluster is healthy again. 
+
+
 
 # Cleanup
 Delete deployment first, deleting pods will not help as k8s will spin up a lost pod, as it will think this being a service failure. Go to last step if you want to delete in one command
