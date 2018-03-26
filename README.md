@@ -60,6 +60,7 @@ Change ```“type: NodePort”``` -> ```“type: LoadBalancer” [its an VI edit
 ```kubectl get service --watch``` [Wait for external ip to be provisioned]
 
 Open Couchbase console, perform the walk through
+
 #Steps to show self-healing scenario
 
 ```kubectl get pods```
