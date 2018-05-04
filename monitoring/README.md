@@ -2,6 +2,10 @@
 
 Configure monitoring of your AKS cluster using the [Containers solution for Log Analytics](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-containers)
 
+Steps for deploying solution are taken from this [link](https://portal.azure.com/?feature.customportal=false#create/Microsoft.ContainersOMS)
+
+# Alternately follow steps below
+
 Click on Create Resource and search icon pops up and enter "Container Monitoring Solution"
 ![Alt text](/monitoring/images/pic1.png?raw=true "Container Monitoring Solution")
 
