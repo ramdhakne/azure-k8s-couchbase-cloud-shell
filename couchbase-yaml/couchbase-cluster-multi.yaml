@@ -1,7 +1,7 @@
 apiVersion: couchbase.database.couchbase.com/v1beta1
 kind: CouchbaseCluster
 metadata:
-  name: cb-example-ram-aws
+  name: cb-example-aws
 spec:
   baseImage: couchbase/server
   version: 5.5.0-Mar 
