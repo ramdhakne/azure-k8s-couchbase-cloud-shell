@@ -1,22 +1,22 @@
 apiVersion: couchbase.database.couchbase.com/v1beta1
 kind: CouchbaseCluster
 metadata:
-  name: cb-example-aks-CUSTOMER_NAME
+  name: cb-example-ram-aws
 spec:
   baseImage: couchbase/server
-  version: enterprise-5.0.1
+  version: 5.5.0-Mar 
   authSecret: cb-example-auth
   exposeAdminConsole: true
   cluster:
-    dataServiceMemoryQuota: 1024
+    dataServiceMemoryQuota: 256 
     indexServiceMemoryQuota: 256
     searchServiceMemoryQuota: 256
     indexStorageSetting: memory_optimized
-    autoFailoverTimeout: 30
+    autoFailoverTimeout: 10
   buckets:
-    - name: AzResourceGroupBucket
+    - name: kopsClusterBucket
       type: couchbase
-      memoryQuota: 256 
+      memoryQuota: 256
       replicas: 1
       ioPriority: high
       evictionPolicy: fullEviction
@@ -24,12 +24,21 @@ spec:
       enableFlush: true
       enableIndexReplica: false
   servers:
-    - size: 3 
-      name: all_services
+    - size: 6 
+      name: data
       services:
         - data
-        - index
+      dataPath: /opt/couchbase/var/lib/couchbase/data
+      indexPath: /opt/couchbase/var/lib/couchbase/data
+    - size: 2
+      name: query
+      services:
         - query
-        - search 
+      dataPath: /opt/couchbase/var/lib/couchbase/data
+      indexPath: /opt/couchbase/var/lib/couchbase/data
+    - size: 2 
+      name: index 
+      services:
+        - index
       dataPath: /opt/couchbase/var/lib/couchbase/data
       indexPath: /opt/couchbase/var/lib/couchbase/data
